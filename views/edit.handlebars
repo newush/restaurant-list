@@ -1,0 +1,79 @@
+<head>
+  <link rel="stylesheet" href="/stylesheets/showStyles.css">
+</head>
+<header>
+  <div class="banner"></div>
+</header>
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="create-form">
+      <form action="/restaurants/{{ restaurant._id }}?_method=PUT" method="POST">
+        <div class="form-row justify-content-center">
+          <div class="form-group col-md-6">
+            <label for="name">餐廳名稱（中文）</label>
+            <input required type="text" class="form-control" id="name" name="name" placeholder="Restaurant Chinese Name"
+              value="{{ restaurant.name }}">
+          </div>
+          <div class="form-group col-md-4 ml-2">
+            <label for="category">餐廳類型</label>
+            <select required id="category" class="form-control" name="category">
+              <option value="">請選擇類型</option>
+              <option {{#ifeq "美式餐廳" restaurant.category}} selected {{/ifeq}}>美式餐廳</option>
+              <option {{#ifeq "日本料理" restaurant.category}} selected {{/ifeq}}>日本料理</option>
+              <option {{#ifeq "義式餐廳" restaurant.category}} selected {{/ifeq}}>義式餐廳</option>
+              <option {{#ifeq "中式餐廳" restaurant.category}} selected {{/ifeq}}>中式餐廳</option>
+              <option {{#ifeq "泰式料理" restaurant.category}} selected {{/ifeq}}>泰式料理</option>
+              <option {{#ifeq "中東料理" restaurant.category}} selected {{/ifeq}}>中東料理</option>
+              <option {{#ifeq "咖啡" restaurant.category}} selected {{/ifeq}}>咖啡</option>
+              <option {{#ifeq "酒吧" restaurant.category}} selected {{/ifeq}}>酒吧</option>
+            </select>
+          </div>
+          <div class="form-row justify-content-center">
+            <div class="form-group col-10">
+              <label for="name">餐廳名稱（英文）</label>
+              <input required type="text" class="form-control" id="name_en" name="name_en"
+                placeholder="Restaurant English Name" value="{{restaurant.name_en}}">
+            </div>
+            <div class="form-group col-10">
+              <label for="location">餐廳地址</label>
+              <input required type="text" class="form-control" id="location" name="location"
+                placeholder="Restaurant Address" value="{{restaurant.location}}">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="phone">電話號碼</label>
+              <input required type="text" class="form-control" id="phone" name="phone"
+                placeholder="(area code) + phone number" value="{{restaurant.phone}}">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="rating">評分（1 - 5）</label>
+              <input required type="text" class="form-control" id="rating" name="rating" placeholder="4.0"
+                value="{{restaurant.rating}}">
+            </div>
+            <div class="form-group col-10">
+              <label for="image">餐廳照片</label>
+              <input required type="text" class="form-control" id="image" name="image" placeholder="http://"
+                value="{{restaurant.image}}">
+            </div>
+            <div class="form-group col-10">
+              <label for="google_map">Google 地圖位址</label>
+              <input required type="text" class="form-control" id="google_map" name="google_map"
+                placeholder="Google map URL" value="{{restaurant.google_map}}">
+            </div>
+            <div class="form-group col-md-10">
+              <label for="description">描述</label>
+              <textarea required type="text" class="form-control form-description" id="description" name="description"
+                placeholder="（餐廳主要特色、服務、優缺點">{{restaurant.description}}
+              </textarea>
+            </div>
+            <div class="form-group col-md-10 justify-content-start" style="margin-top: 10px;">
+              <button type="submit" class="btn btn-info">儲存</button>
+              <a href="/">
+                <button type="button" class="btn btn-warning ml-3">返回</button>
+              </a>
+            </div>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>
