@@ -32,6 +32,7 @@ A website use Node.js + Express to list restaurants information and search resta
 - Mongoose: v5.11.8
 - body-parser: v1.19.0
 - Method-Override: v3.0.0
+- Express-session: v1.17.1
 
 ### Installing
 1. Clone the repository

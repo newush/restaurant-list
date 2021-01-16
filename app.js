@@ -1,4 +1,5 @@
 const express = require('express')
+const session = require('express-session')
 const app = express()
 const port = 3000
 const exphbs = require('express-handlebars')
@@ -10,6 +11,11 @@ require('./config/mongoose')
 
 app.set('view engine', 'handlebars')
 
+app.use(session({
+  secret: 'MySecret',
+  resave: false,
+  saveUninitialized: true
+}))
 app.engine('handlebars', exphbs({ defaultLayout: 'main', helpers: hbsHelpers }))
 
 app.use(express.static('public'))
