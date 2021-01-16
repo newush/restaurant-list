@@ -1,5 +1,6 @@
 const express = require('express')
 const session = require('express-session')
+const usePassport = require('./config/passport')
 const app = express()
 const port = 3000
 const exphbs = require('express-handlebars')
@@ -23,6 +24,7 @@ app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ extended: true }))
 
 app.use(methodOverride('_method'))
+usePassport(app)
 app.use(routes)
 
 app.listen(port, () => {

@@ -33,6 +33,8 @@ A website use Node.js + Express to list restaurants information and search resta
 - body-parser: v1.19.0
 - Method-Override: v3.0.0
 - Express-session: v1.17.1
+- Passport: v0.4.1
+- Passport-local: v1.0.0
 
 ### Installing
 1. Clone the repository
