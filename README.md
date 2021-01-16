@@ -34,28 +34,27 @@ A website use Node.js + Express to list restaurants information and search resta
 - Method-Override: v3.0.0
 
 ### Installing
-1. Clone the project
-```
-$ git clone git@github.com:newush/AlphaCamp.git
-$ cd restaurant_list
+1. Clone the repository
+```shell
+$ git clone git@github.com:newush/restaurant-list.git
 ```
 2. Install local packages
-```
+```shell
 $ npm install
 ```
 3. Run seed
-```
+```shell
 $ npm run seed
 ```
 4. Run server and project
-```
+```shell
 $ npm run dev
 ```
 5. Open your browser `http://localhost/3000`
 
 ### Versioning
-Based on Alpha Camp semester 2-3 S3
-v.0
+Based on Alpha Camp semester 3 S1 A1
+v.0.1
 
 ## Contributor
 
