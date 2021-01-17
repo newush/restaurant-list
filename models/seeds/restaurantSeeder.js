@@ -43,11 +43,10 @@ db.once('open', () => {
         console.log('restaurant done')
       }))
   })
-  // 
+
   Promise.all(userPromises)
     .then(() => {
       console.log('done')
       process.exit()
     })
-
 })

@@ -8,7 +8,7 @@ router.get('/new', (req, res) => {
 
 router.post('/', (req, res) => {
   const userId = req.user._id
-  return Restaurant.create({ ...req.body, userId }) //把原本 object 拆解後 與 userId 重組新的 object
+  return Restaurant.create({ ...req.body, userId }) //  把原本 object 拆解後 與 userId 重組新的 object
     .then(() => res.redirect('/'))
     .catch(error => console.log(error))
 })
