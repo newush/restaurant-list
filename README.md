@@ -36,6 +36,7 @@ A website use Node.js + Express to list restaurants information and search resta
 - Passport: v0.4.1
 - Passport-local: v1.0.0
 - Connect-flash: v0.1.1
+- bcrypt: v2.4.3
 
 ### Installing
 1. Clone the repository
