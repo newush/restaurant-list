@@ -21,11 +21,12 @@ A website use Node.js + Express to list restaurants information and search resta
 - The user can edit a restaurant information
 - The user can delete a restaurant
 - The user can sort restaurants by name, category, location, or rating
+- The user can register a personal account through Email or Facebook
 
 ### Prerequisites
 
 - npm v6.14.9
-- Node.js v14.4.0
+- Node.js v15.4.0
 - nodemon v2.0.6
 - Express v4.17.1
 - Express Handlebars v5.2.0
